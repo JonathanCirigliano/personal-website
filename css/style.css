@@ -1,0 +1,896 @@
+html,body{
+	min-height: 100%;
+}
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+#vw{
+	height: 100vh;
+	background-color: #27BDDE;
+}
+
+header{
+	min-height: 80px;
+}
+
+
+.container{
+	width: 80%;
+	margin: auto;
+}
+
+.container_2{
+	width: 80%;
+	margin: auto;
+}
+
+.container_3{
+	width: 80%;
+	height: 400px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.container_4{
+	width: 80%;
+	margin: auto;
+	display: flex;
+}
+
+.container_5{
+	width: 80%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container_6{
+	width: 80%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container_7{
+	width: 80%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#logo img{
+	width: 130px;
+	float: left;
+	position: relative;
+	bottom: 12px;
+}
+
+img{
+	margin-bottom: 30px;
+}
+
+nav{
+	display: block;
+}
+
+nav ul{
+	float: right;
+	list-style: none;
+	margin-top: 34px;
+}
+
+#mobileMenu{
+	display: none;
+}
+
+li{
+	float: left;
+	margin-left: 50px;
+}
+
+li a{
+	text-decoration: none;
+	color: black;
+	letter-spacing: 0.3em;
+	font-size: 1.1em;
+	font-weight: 600;
+	transition: 0.4s color;
+}
+
+li a:hover{
+	color: #de2773;
+}
+
+
+#myDescription h1{
+	color: #de2773;
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+	font-size: 40px;
+	margin-top: 220px;
+	margin-bottom: 6px;
+	cursor: pointer;
+}
+
+#myDescription h3{
+	color: #de2773;
+	letter-spacing:0.4em;
+	font-style: italic;
+	font-size: 0.9em;
+	margin: 0;
+	cursor: pointer;
+}
+
+button{
+	background: none;
+	border: none;
+	margin: 150px auto;
+}
+
+button a i{
+	color: black;
+	font-size: 40px;
+	/*transition: transform 1.6s;*/
+	animation: bounce 4s ease-in infinite;
+}
+
+@keyframes bounce{
+	0%, 80%,100%{
+		transform: scale(1);
+	}
+
+	40%{
+		transform: scale(1.4);
+	}
+
+}
+
+button a i:hover{
+	color: #de2773;
+}
+
+#workImg{
+	text-align: center;
+}
+
+/* section about me */
+#aboutMe{
+	min-height: 400px;
+	background-color: #ade6e6;
+}
+
+#avatar{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: url(../immagini/jc.jpg);
+	background-size: cover;
+}
+
+#chiSono{
+	width: 65%;
+}
+
+#aboutMe h2{
+	margin: 0;
+	color: #27BDDE;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;	
+}
+
+#aboutMe p{
+	margin-top: 30px;
+	letter-spacing: 0.2em;
+	line-height: 1.6em;
+	text-align: justify;	
+}
+/* section lavori */
+#lavori{
+	min-height: 1000px;
+	background-color: #7AD7EC;
+	padding-top: 140px;
+	padding-bottom: 140px; 
+}
+
+.card{
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	width: 70%;
+	margin: 0 auto;
+	height: 490px;
+	cursor: pointer;
+	background-color: #ade6e6;
+}
+
+.card img{
+	width: 78%;
+	height: 420px;
+	padding: 30px;
+}
+
+  
+.card:hover{
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+  
+ 
+.cardContainer{
+	padding: 30px;
+	position: relative;
+	top: -480px;
+	left: -240px;
+	width: 100%;
+	height: 100%;
+}
+
+.cardContainer h1{
+	color: black;
+	text-transform: uppercase;
+	transform: translateY(20px);
+	transition: 0.4s; 
+	letter-spacing: 0.3em;
+}
+
+.card:hover .cardContainer h1{
+	transform: translateY(0px);
+}
+
+.linkSito{
+	position: relative;
+	top: 250px;
+	left: 430px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #7AD7EC;
+	border: 4px solid #333;
+	background-color: #333;
+	font-size: 16px;
+	padding: 14px;
+	letter-spacing: 0.2em;
+	visibility: hidden;
+}
+
+.linkSito:hover{
+	color: #333;
+	border: 4px solid #7AD7EC;
+	background-color: #7AD7EC;
+	font-weight: 600; 
+}
+
+.card:hover .linkSito{
+	visibility: visible;
+}
+
+.cardContainer::before{
+	content: "";
+	background: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	left: 235px;
+	bottom: 90px;
+	width: 94.2%;
+	height: 0px;
+	clip-path: polygon(0 100%,100% 0,100% 100%);
+	transition: 0.5s;
+}
+
+.cardContainer:hover::before{
+	height: 150px;
+}
+
+#secondaCard{
+	margin: 140px auto 0 auto;
+}
+
+#terzaCard{
+	margin: 140px auto 0 auto;
+}
+
+#quartaCard{
+	margin: 140px auto 0 auto;
+}
+/* section skills */
+#skills{
+	min-height: 500px;
+	background-color:#4aaec5;
+}
+
+#skills h2{
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+	color: #4aaec5;
+	letter-spacing: 0.4em;
+	padding: 30px;
+	font-size: 2em;
+}
+
+.developerTools{
+	text-align: center;
+	background-color: #333;
+	padding: 40px 20px 20px 20px;
+	margin: 40px auto;  
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	flex-basis: 200px;
+	border-radius: 100%;
+	transition: transform 1.6s;
+}
+
+.developerTools:hover{
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	transform: scale(1.2);
+}
+
+.developerTools i{
+	font-size: 110px;
+	margin-top: 0;
+	color: #4aaec5;
+}
+
+#skills h3{
+	color: #4aaec5;
+}
+
+/* section services */
+#servizi{
+	background-color: lightblue;
+	min-height: 100px;
+}
+
+#seo h2, #design h2, #support h2{
+	margin: 0;
+	color: #27BDDE;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+}
+
+#seo p, #design p, #support p{
+	margin-top: 30px;
+	letter-spacing: 0.2em;
+	line-height: 1.6em;
+	text-align: justify;
+}
+
+.container_5 > div{
+	margin-left: 160px;
+	width: 60%;
+}
+
+.container_6 > div{
+	margin-left: 160px;
+	width: 60%;
+}
+
+.container_7 > div{
+	margin-left: 160px;
+	width: 60%;
+}
+
+.margin{
+	padding: 60px 0;
+}
+
+#icona_1{
+	font-size: 60px;
+	padding: 24px;
+	border: 4px solid #27BDDE;
+	border-radius: 100%;
+	color: #27BDDE;
+	background-color:lightblue;
+}
+
+#icona_2{
+	font-size: 60px;
+	padding: 24px;
+	border: 4px solid #27BDDE;
+	border-radius: 100%;
+	color: #27BDDE;
+	background-color:lightblue;
+}
+
+#icona_3{
+	font-size: 60px;
+	padding: 24px;
+	border: 4px solid #27BDDE;
+	border-radius: 100%;
+	color: #27BDDE;
+	background-color:lightblue;
+}
+
+#icona_1:hover, #icona_2:hover, #icona_3:hover{
+	color:lightblue;
+	background-color: #27BDDE;
+	border: #27BDDE 4px solid;
+}
+
+/* footer */
+footer{
+	background-color: #27BDDE;
+	text-align: center;
+}
+
+address{
+	padding: 70px;
+	color: black;
+	font-size: 18px;
+}
+
+#email{
+	text-decoration: none;
+	font-style: normal;
+	text-transform: capitalize;
+	font-size: 20px;
+	margin-left: 20px;
+	color: black;
+	letter-spacing: 0.2em;
+	transition: transform 1.6s;
+	font-weight: 600;
+}
+
+ #email:hover{
+	color: #de2773;
+}
+
+#lettera{
+	font-size: 20px;
+	color: black;
+}
+
+#social{
+	margin-top: 50px;
+	padding-top: 30px;
+}
+
+#social a{
+	padding: 20px 20px 0 20px;
+	color: black;
+	
+}
+
+#social i:hover{
+	transform: scale(1.5);
+	color: #de2773;
+}
+
+#social i{
+	font-size: 30px;
+	transition: transform 1.6s;
+}
+
+
+
+
+
+
+
+
+
+  
+
+  @media (max-width: 768px){
+
+	#vw{
+		min-height: 780px;
+	}
+	  .container{
+		  text-align: center;
+	  }
+	  #logo img{
+		  float: none;
+	  }
+	  
+	  nav ul{
+		  float: none;
+		  margin-right: 30px;
+		  display: none;
+	  }
+
+	  li{
+		  margin: 30px 30px 0 30px;
+		  float: none;
+	  }
+
+	  #mobileMenu{
+		  display: block;
+	  }
+
+	  #blocco_1{
+		  text-align: center;
+	  }
+
+	  #myDescription h1{
+		  font-size: 1.2em;
+		  margin-top: 160px;
+	  }
+
+	  /*lavori*/
+	  .card img{
+		width: 300px;
+		height: 300px;
+		padding: 20px;
+		margin: 0 auto;
+	}
+
+	.cardContainer h1{
+		display: none;
+	}
+
+	.linkSito{
+		display: none;
+	}
+
+	.cardContainer::before{
+		display: none;
+	}
+
+	.card{
+		height: 350px;
+	}
+
+	/* about me */
+	#aboutMe{
+		height: 650px;
+		padding: 120px 0;
+	}
+	.container_3{
+		display: block;
+		text-align: center;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	#avatar{
+		margin: 0 auto;
+	}
+
+	#chiSono{
+		margin: 160px auto;
+		width: 80%;
+	}
+
+
+	  /* skills */
+	  .container_4{
+		  display: block;
+		  width: 80%;
+		  margin: auto;
+	  }
+
+	  #skills{
+		  height: 1030px;
+	  }
+
+	  #skills h2{
+		  font-size: 1.2em;
+		  margin-bottom: 50px;
+		  color: #333;
+	  }
+
+	  .developerTools{
+		  margin: 60px auto 30px auto;
+		  border-radius: 0;
+	  }
+
+	  .developerTools:hover{
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		transform: scale(1.1);
+	}
+
+	  /* servizi */
+	  .container_5{
+		display: block;
+		text-align: center;
+	  }
+
+	  .container_6{
+		display: block;
+		text-align: center;
+	}
+
+	.container_7{
+		display: block;
+		text-align: center;
+	}
+
+	.container_5 > div{
+		margin: 100px 0 0 0;
+		width: 100%;
+	}
+	
+	.container_6 > div{
+		margin: 100px 0 0 0;
+		width: 100%;
+	}
+	
+	.container_7 > div{
+		margin: 100px 0 0 0;
+		width: 100%;
+	}
+
+	/* footer */
+	#social a{
+		padding: 20px 15px 0 20px;
+		color: black;
+		
+	}
+
+	/* hamburger menu */
+	.nav-icon {
+		margin: 1em;
+		width: 30px;
+		position: relative;
+		left: 350px;
+		top: -144px;
+	  }
+	  
+	  .nav-icon:after, 
+	  .nav-icon:before, 
+	  .nav-icon div {
+		background-color: black;
+		border-radius: 3px;
+		content: '';
+		display: block;
+		height: 5px;
+		margin: 7px 0;
+		transition: all .2s ease-in-out;
+		cursor: pointer;
+	  }
+
+	  .nav-icon:hover:before {
+		transform: translateY(12px) rotate(135deg);
+	  }
+	  
+	  .nav-icon:hover:after {
+		transform: translateY(-12px) rotate(-135deg);
+	  }
+	  
+	.nav-icon:hover div {
+		transform: scale(0);
+	}
+}
+
+.spinner:before{
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 60px;
+	width: 60px;
+	margin-left: -30px;
+	margin-top: -30px;
+	border-radius: 50%;
+	border-top: 4px solid #de2773;
+	border-right: 4px solid transparent;
+	animation: spinner 1s linear infinite; 
+}
+
+@keyframes spinner{
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+@media (max-width: 480px){
+
+	#vw{
+		min-height: 800px;
+	}
+	  .container{
+		  text-align: center;
+	  }
+	  #logo img{
+		  float: none;
+	  }
+	  
+	  nav ul{
+		  float: none;
+		  margin-right: 30px;
+		  display: none;
+	  }
+
+	  li{
+		  margin: 30px 30px 0 30px;
+		  float: none;
+	  }
+
+	  #mobileMenu{
+		  display: block;
+	  }
+
+	  #blocco_1{
+		  text-align: center;
+	  }
+
+	  #myDescription h1{
+		  font-size: 1.2em;
+		  margin-top: 160px;
+	  }
+
+	  /*lavori*/
+	  .card img{
+		width: 220px;
+		height: 200px;
+		padding: 20px;
+		margin: 0 auto;
+	}
+
+	.cardContainer h1{
+		display: none;
+	}
+
+	.linkSito{
+		display: none;
+	}
+
+	.cardContainer::before{
+		display: none;
+	}
+
+	.card{
+		height: 250px;
+	}
+
+
+	/* footer */
+	#social a{
+		padding: 20px 15px 0 20px;
+		color: black;
+	}
+
+
+	#email{
+		font-size: 16px;
+		margin-left: 20px;
+	}
+
+	#lettera{
+		font-size: 16px;
+		color: black;
+	}
+	
+	#social{
+		margin-top: 50px;
+		padding-top: 30px;
+	}
+	
+	#social a{
+		padding: 7px 7px 0 7px;
+		color: black;
+	}
+
+	/* hamburger menu */
+	.nav-icon {
+		margin: 1em;
+		width: 30px;
+		position: relative;
+		left: 280px;
+		top: -144px;
+	}
+
+	html, body {
+		width: 100%;
+		overflow-x: hidden;
+	}
+}
+
+	@media (max-width: 480px) {
+
+		#vw{
+			min-height: 800px;
+		}
+		  .container{
+			  text-align: center;
+		  }
+		  #logo img{
+			  float: none;
+		  }
+		  
+		  nav ul{
+			  float: none;
+			  margin-right: 30px;
+			  display: none;
+		  }
+	
+		  li{
+			  margin: 30px 30px 0 30px;
+			  float: none;
+		  }
+	
+		  #mobileMenu{
+			  display: block;
+		  }
+	
+		  #blocco_1{
+			  text-align: center;
+		  }
+	
+		  #myDescription h1{
+			  font-size: 1.2em;
+			  margin-top: 160px;
+		  }
+	
+		  /*lavori*/
+		  .card img{
+			width: 280px;
+			height: 200px;
+			padding: 20px;
+			margin: 0 auto;
+		}
+	
+		.cardContainer h1{
+			display: none;
+		}
+	
+		.linkSito{
+			display: none;
+		}
+	
+		.cardContainer::before{
+			display: none;
+		}
+	
+		.card{
+			height: 250px;
+			width: 100%;
+		}
+	
+	
+		/* footer */
+		#social a{
+			padding: 20px 15px 0 20px;
+			color: black;
+		}
+	
+	
+		#email{
+			font-size: 16px;
+			margin-left: 20px;
+		}
+	
+		#lettera{
+			font-size: 16px;
+			color: black;
+		}
+		
+		#social{
+			margin-top: 50px;
+			padding-top: 30px;
+		}
+		
+		#social a{
+			padding: 2px 2px 0 2px;
+			color: black;
+		}
+	
+		/* hamburger menu */
+		.nav-icon {
+			margin: 1em;
+			width: 30px;
+			position: relative;
+			left: 190px;
+			top: -144px;
+		}
+
+		html, body {
+			width: 100%;
+			overflow-x: hidden;
+		}
+	}	
+
+
+
+  
+  
+  
+
